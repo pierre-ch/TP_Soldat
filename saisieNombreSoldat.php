@@ -1,29 +1,34 @@
+<!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="styleSoldat.css" type="text/css" />
+        <link rel="stylesheet" href="bootstrap-4.6.1-dist/css/bootstrap.min.css" type="text/css" />
         <title>
-            Saisie nombre de Soldats
+            Soldat
         </title>
-        <meta http-equiv="content-type" content="text/html"; charset="UTF-8"/>
-        <link rel=STYLESHEET href="css/bootstrap.min.css" type="text/css">
     </head>
     <header align=center>
-    <br>
-        <h1>Saisir le nombre de soldats</h1>
-    <br>
+        <h1>Indemnité des Soldats</h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="saisieNombreSoldat.php">Accueil</a></li>
+            </ol>
+        </nav>
     </header>
     <body>
-        <form action=saisieSoldat.php method=GET align=center>
-            <table border=1 align=center>
-                <tr>
-                    <td>
-                        Nombre de soldats
-                    </td>
-                    <td>
-                    <input type=number name=nombreSoldat min=1 required></imput>
-                    </td>
-                </tr>
-            </table>
-            <br>
-            <input class="btn btn-primary" type="submit" value="Valider">
-        </body>
+        <table border=1 align=center>
+            <tr>
+                <td>
+                    Combien de soldats sont à indemniser ?
+                </td>
+                <td>
+                    <form action=saisieSoldat.php method=GET>
+                        <input type=number name=nbrSoldat min=1 required>
+                        <input type=submit>
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </body>
 </html>
