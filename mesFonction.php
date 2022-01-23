@@ -1,5 +1,5 @@
 <?php
-    function calculIndemnite($name, $day)
+    function calculIndemnite($day)
     {
         if ($day <= 10)
         {

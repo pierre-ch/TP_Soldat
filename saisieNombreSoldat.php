@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styleSoldat.css" type="text/css" />
     <link rel="stylesheet" href="bootstrap-4.6.1-dist/css/bootstrap.min.css" type="text/css" />
-    <link rel="shortcut icon" type="image/png" href="favicon-32x32.png"/>
+    <link rel="shortcut icon" type="image/png" href="favicon-32x32.png" />
     <title>
         Soldat
     </title>
@@ -32,9 +32,15 @@
         <form action=saisieSoldat.php method=GET>
             <input type=number name=nbrSoldat min=1 required>
             <br><br>
-            <button type="submit" class="btn btn-primary">Continuer</button>
+            <button type="submit" class="btn btn-primary">Continuer</i> </button>
         </form>
     </div>
 </body>
+
+<footer class="text-center text-lg-start bg-light fixed-bottom text-muted">
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.01);">
+        Copyright © <?php echo date("Y"); ?> <i>Lycée Carcouët</i>
+    </div>
+</footer>
 
 </html>

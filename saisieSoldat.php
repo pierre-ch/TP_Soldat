@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styleSoldat.css" type="text/css" />
     <link rel="stylesheet" href="bootstrap-4.6.1-dist/css/bootstrap.min.css" type="text/css" />
-    <link rel="shortcut icon" type="image/png" href="favicon-32x32.png"/>
+    <link rel="shortcut icon" type="image/png" href="favicon-32x32.png" />
     <title>
         Soldat
     </title>
@@ -55,11 +55,17 @@
             <br>
             <div align=center>
                 <input class="btn btn-light" type="button" value="Retour" onclick="history.back()">
-                <input class="btn btn-danger" type="reset" value="Effacer">
+                <input class="btn btn-danger" type="reset" value="Effacer"><i class="bi bi-x-lg"></i></input>
                 <button type="submit" class="btn btn-success">Valider</button>
             </div>
         </form>
     </div>
 </body>
+<br>
+<footer class="text-center text-lg-start bg-light fixed-bottom text-muted">
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0);">
+        Copyright © <?php echo date("Y"); ?> <i>Lycée Carcouët</i>
+    </div>
+</footer>
 
 </html>

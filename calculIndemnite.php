@@ -10,6 +10,7 @@
         Soldat
     </title>
 </head>
+
 <header align=center>
     <div class="container-sm">
         <br>
@@ -29,6 +30,7 @@
     <?php
     include('mesFonction.php');
     $nombre = $_GET['nombreSoldat'];
+    $tabJour = array();
     $tabName = array();
     $tabDay = array();
     ?>
@@ -39,6 +41,7 @@
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Nom du soldat</th>
+                    <th scope="col">🌊 Jours en mer</th>
                     <th scope="col">💶 Indemnité</th>
                 </tr>
             </thead>
@@ -48,10 +51,11 @@
                 for ($i = 0; $i < $nombre; $i++) {
                     $tabName[$i] = $_GET['nomSoldat' . $i];
                     $tabDay[$i] = $_GET['nbrJour' . $i];
-                    $total = calculIndemnite($tabName[$i], $tabDay[$i]);
+                    $total = calculIndemnite($tabDay[$i]);
                     echo '<tr>
                             <th scope="row">' . $numeroTableSoldat . '</th>
                                 <td>' . $tabName[$i] . '</td>
+                                <td>'. $tabDay[$i] . '</td>
                                 <td>' . $total . ' €</td>
                         </tr>';                   
                     $numeroTableSoldat++;
@@ -61,5 +65,11 @@
         </table>
     </div>
 </body>
+
+<footer class="text-center text-lg-start bg-light fixed-bottom text-muted">
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.01);">
+        Copyright © <?php echo date("Y"); ?> <i>Lycée Carcouët</i>
+    </div>
+</footer>
 
 </html>
